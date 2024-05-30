@@ -1,6 +1,6 @@
 # End-to-end Visual-Inertial Fusion for Ego-Motion Estimation <br>
 
-This repository includes work from my Master's Thesis and augements the code published in the paper [Deep Permutation Equivariant Structure from Motion](https://arxiv.org/abs/2104.06703). The installation procedure is the same.
+This repository includes a portion of work from my Master's Thesis and augements the code published in the paper [Deep Permutation Equivariant Structure from Motion](https://arxiv.org/abs/2104.06703). The installation procedure is the same.
 ### Table of Contents
 
 - [Setup](#Setup)
