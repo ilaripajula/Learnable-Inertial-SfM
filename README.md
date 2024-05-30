@@ -1,16 +1,6 @@
-# Deep Permutation Equivariant Structure from Motion <br>
+# End-to-end Visual-Inertial Fusion for Ego-Motion Estimation <br>
 
-### [Paper](https://arxiv.org/abs/2104.06703) | [Poster](/media/ICCV_Slide.pdf)
-<p align="center">
-  <img width="100%" src="media/four_optimization_results.gif"/>
-</p>
-
-This repository contains an implementation for the ICCV 2021 paper <a href="https://arxiv.org/abs/2104.06703">Deep Permutation Equivariant Structure from Motion</a>.
-
-The paper proposes a neural network architecture that, given a set of point tracks in multiple images of a static scene, recovers both the camera parameters and a (sparse) scene structure by minimizing an unsupervised reprojection loss. The method does not require initialization of camera parameters or 3D point locations and is implemented for two setups: (1) single scene reconstruction and (2) learning from multiple scenes.
-
-
-
+This repository includes work from my Master's Thesis and augements the code published in the paper [Deep Permutation Equivariant Structure from Motion](https://arxiv.org/abs/2104.06703). The installation procedure is the same.
 ### Table of Contents
 
 - [Setup](#Setup)
@@ -65,6 +55,11 @@ For the calibrated setting, the input must include ```m``` calibration matrices 
 
 ## How to use
 
+### Learning with Inertial Data
+
+```
+python multiple_IMU_scenes_learning.py --conf Learning_Euc.conf
+```
 
 ### Optimization
 For a calibrated scene optimization run:
@@ -101,17 +96,3 @@ To override some parameters from the config file, you can either change the file
 python multiple_scenes_learning.py --conf Learning_Euc.conf --external_params "train:num_of_epochs:1e+5,train:eval_intervals:100"
 ```
 
-
-## Citation
-If you find this work useful please cite:
-
-```
-@InProceedings{Moran_2021_ICCV,
-    author    = {Moran, Dror and Koslowsky, Hodaya and Kasten, Yoni and Maron, Haggai and Galun, Meirav and Basri, Ronen},
-    title     = {Deep Permutation Equivariant Structure From Motion},
-    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
-    month     = {October},
-    year      = {2021},
-    pages     = {5976-5986}
-}
-```
